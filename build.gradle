@@ -3,8 +3,8 @@ plugins {
 	id 'maven-publish'
 }
 
-group = project.maven_group
-version = project.api_version
+group = 'com.chenweikeng.monkeycraft'
+version = '1.0.0'
 
 repositories {
 	mavenCentral()
@@ -12,7 +12,6 @@ repositories {
 }
 
 dependencies {
-	compileOnly "net.fabricmc:fabric-loader:${project.loader_version}"
 	compileOnly "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 

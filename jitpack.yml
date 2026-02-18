@@ -1,0 +1,6 @@
+jdk:
+  - openjdk21
+before_install:
+  - rm -rf ~/.gradle/caches/
+install:
+  - ./gradlew clean publishToMavenLocal --no-configuration-cache
