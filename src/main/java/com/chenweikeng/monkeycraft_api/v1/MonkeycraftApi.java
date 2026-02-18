@@ -1,4 +1,4 @@
-package com.chenweikeng.monkeycraft.api.v1;
+package com.chenweikeng.monkeycraft_api.v1;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;

@@ -1,4 +1,4 @@
-package com.chenweikeng.monkeycraft.api.v1;
+package com.chenweikeng.monkeycraft_api.v1;
 
 public enum CommandExecutionResult {
   ALLOW,

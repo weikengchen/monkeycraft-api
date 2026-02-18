@@ -3,7 +3,7 @@ plugins {
 	id 'maven-publish'
 }
 
-group = 'com.chenweikeng.monkeycraft'
+group = 'com.chenweikeng.monkeycraft_api'
 version = '1.0.0'
 
 repositories {
@@ -22,7 +22,7 @@ java {
 }
 
 jar {
-	inputs.property "archivesName", "monkeycraft-api"
+	inputs.property "archivesName", "monkeycraft_api"
 	
 	from("LICENSE") {
 		rename { "${it}_${inputs.properties.archivesName}"}
