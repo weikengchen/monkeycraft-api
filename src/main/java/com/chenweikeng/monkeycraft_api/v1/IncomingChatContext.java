@@ -1,24 +1,23 @@
 package com.chenweikeng.monkeycraft_api.v1;
 
-public class ChatMessageContext {
-  private String message;
+import net.minecraft.network.chat.Component;
+
+public class IncomingChatContext {
+  private Component message;
   private final String senderUuid;
   private final String senderName;
-  private final boolean outgoing;
 
-  public ChatMessageContext(
-      String message, String senderUuid, String senderName, boolean outgoing) {
+  public IncomingChatContext(Component message, String senderUuid, String senderName) {
     this.message = message;
     this.senderUuid = senderUuid;
     this.senderName = senderName;
-    this.outgoing = outgoing;
   }
 
-  public String getMessage() {
+  public Component getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(Component message) {
     this.message = message;
   }
 
@@ -28,9 +27,5 @@ public class ChatMessageContext {
 
   public String getSenderName() {
     return senderName;
-  }
-
-  public boolean isOutgoing() {
-    return outgoing;
   }
 }

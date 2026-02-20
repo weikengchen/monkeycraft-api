@@ -1,6 +1,7 @@
 plugins {
 	id 'java'
 	id 'maven-publish'
+	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
 }
 
 group = 'com.chenweikeng.monkeycraft_api'
@@ -9,9 +10,13 @@ version = '1.0.0'
 repositories {
 	mavenCentral()
 	maven { url = "https://maven.fabricmc.net/" }
+	maven { url = "https://maven.shedaniel.me/" }
 }
 
 dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	compileOnly "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 

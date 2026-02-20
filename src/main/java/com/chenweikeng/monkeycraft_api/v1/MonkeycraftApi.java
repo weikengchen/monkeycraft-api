@@ -40,13 +40,13 @@ public final class MonkeycraftApi {
                 return CommandExecutionResult.PASS;
               });
 
-  public static final Event<MonkeycraftChatListener> INCOMING_CHAT =
+  public static final Event<IncomingChatListener> INCOMING_CHAT =
       EventFactory.createArrayBacked(
-          MonkeycraftChatListener.class,
+          IncomingChatListener.class,
           (listeners) ->
               (context) -> {
-                for (MonkeycraftChatListener listener : listeners) {
-                  ChatMessageResult result = listener.onChatMessage(context);
+                for (IncomingChatListener listener : listeners) {
+                  ChatMessageResult result = listener.onIncomingChat(context);
                   if (result != ChatMessageResult.PASS) {
                     return result;
                   }
@@ -54,13 +54,13 @@ public final class MonkeycraftApi {
                 return ChatMessageResult.PASS;
               });
 
-  public static final Event<MonkeycraftChatListener> OUTGOING_CHAT =
+  public static final Event<OutgoingChatListener> OUTGOING_CHAT =
       EventFactory.createArrayBacked(
-          MonkeycraftChatListener.class,
+          OutgoingChatListener.class,
           (listeners) ->
               (context) -> {
-                for (MonkeycraftChatListener listener : listeners) {
-                  ChatMessageResult result = listener.onChatMessage(context);
+                for (OutgoingChatListener listener : listeners) {
+                  ChatMessageResult result = listener.onOutgoingChat(context);
                   if (result != ChatMessageResult.PASS) {
                     return result;
                   }
