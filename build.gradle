@@ -1,7 +1,7 @@
 plugins {
-	id 'java'
-	id 'maven-publish'
 	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+	id 'maven-publish'
+	id 'java'
 }
 
 group = 'com.chenweikeng.monkeycraft_api'

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "id": "monkeycraft_api",
+  "version": "1.0.0",
+  "name": "MonkeyCraft API",
+  "entrypoints": {},
+  "depends": {}
+}
