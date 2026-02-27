@@ -17,4 +17,6 @@ public interface MonkeycraftApiProvider {
   boolean isClientConnected();
 
   boolean isHibernating();
+
+  boolean isServerStarted();
 }

@@ -124,4 +124,9 @@ public final class MonkeycraftApi {
     MonkeycraftApiProvider p = MonkeycraftApiRegistration.getProvider();
     return p != null ? p.isHibernating() : null;
   }
+
+  public static Boolean isServerStarted() {
+    MonkeycraftApiProvider p = MonkeycraftApiRegistration.getProvider();
+    return p != null ? p.isServerStarted() : null;
+  }
 }
