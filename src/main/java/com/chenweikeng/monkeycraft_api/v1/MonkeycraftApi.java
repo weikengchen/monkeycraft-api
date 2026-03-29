@@ -26,6 +26,16 @@ public final class MonkeycraftApi {
                 }
               });
 
+  public static final Event<MonkeycraftInfoPacketListener> INFO_PACKET =
+      EventFactory.createArrayBacked(
+          MonkeycraftInfoPacketListener.class,
+          (listeners) ->
+              (title, payload) -> {
+                for (MonkeycraftInfoPacketListener listener : listeners) {
+                  listener.onInfoPacket(title, payload);
+                }
+              });
+
   public static final Event<MonkeycraftCommandExecutionListener> COMMAND_EXECUTION =
       EventFactory.createArrayBacked(
           MonkeycraftCommandExecutionListener.class,
