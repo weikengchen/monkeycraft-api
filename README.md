@@ -2,23 +2,28 @@
 
 A Fabric mod API for MonkeyCraft that provides event hooks and utilities for interacting with the Minecraft client.
 
-## Version
+## Version compatibility
 
-- API Version: 1.0.0
-- Java: 21
-- Minecraft: See `gradle.properties`
+Published via JitPack. Branches `mc-<version>` track each Minecraft line; tag `1.0.0-mc<version>` is the release per line.
+
+| Tag              | MC       | Loom          | Loader  | Fabric API        | Java |
+|------------------|----------|---------------|---------|-------------------|------|
+| 1.0.0-mc1.19     | 1.19     | 1.16-SNAPSHOT | 0.19.2  | 0.58.0+1.19       | 17   |
+| 1.0.0-mc1.21.11  | 1.21.11  | 1.16-SNAPSHOT | 0.19.2  | 0.141.3+1.21.11   | 21   |
+| 1.0.0-mc26.1     | 26.1     | 1.15-SNAPSHOT | 0.18.5  | 0.144.3+26.1      | 25   |
 
 ## Installation
 
-Add to your `build.gradle`:
+Add the JitPack repository and one line per target MC version — the `minecraft_version` property in your consumer's `gradle.properties` selects the matching artifact:
 
 ```groovy
 repositories {
-    maven { url = "https://your-maven-repo" }
+    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
-    modImplementation "com.chenweikeng.monkeycraft_api:monkeycraft-api:1.0.0"
+    modImplementation("com.github.weikengchen:monkeycraft-api:1.0.0-mc${project.minecraft_version}") { transitive = false }
+    include "com.github.weikengchen:monkeycraft-api:1.0.0-mc${project.minecraft_version}"
 }
 ```
 
