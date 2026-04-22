@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.chenweikeng.monkeycraft_api'
-version = '2026-03-29'
+version = "1.0.0-mc${minecraft_version}"
 
 repositories {
 	mavenCentral()
